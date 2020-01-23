@@ -1,7 +1,6 @@
 package com.darorl.converter.di;
 
 import com.darorl.converter.repositories.RatesRepository;
-import com.darorl.converter.repositories.RatesRepositoryImpl;
 import com.darorl.converter.ui.main.RatesContract;
 import com.darorl.converter.ui.main.RatesPresenter;
 

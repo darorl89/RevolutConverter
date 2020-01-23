@@ -1,7 +1,5 @@
 package com.darorl.converter.ui;
 
-import android.view.View;
-
 public interface BasePresenter<V> {
 
     void attachView(V v);

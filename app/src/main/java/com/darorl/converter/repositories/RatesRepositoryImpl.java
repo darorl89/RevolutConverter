@@ -6,8 +6,6 @@ import com.darorl.converter.util.Constants;
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
 
-import javax.inject.Inject;
-
 import io.reactivex.Observable;
 import io.reactivex.subjects.BehaviorSubject;
 import retrofit2.Call;
@@ -21,9 +19,6 @@ public class RatesRepositoryImpl implements RatesRepository {
     private RatesService service;
 
     private BehaviorSubject<RatesData> ratesSubject;
-
-    @Inject
-    RatesRepository ratesRepository;
 
     public RatesRepositoryImpl() {
         GsonBuilder gsonBuilder = new GsonBuilder();
