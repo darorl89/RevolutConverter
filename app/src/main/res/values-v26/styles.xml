@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="TitleBar">
+        <item name="android:textSize">20sp</item>
+        <item name="android:textColor">@color/colorBlack</item>
+        <item name="android:fontFamily">Roboto</item>
+        <item name="android:fontWeight">500</item>
+    </style>
+
+    <style name="ItemTextValue" parent="ItemTextBase">
+        <item name="android:textSize">20sp</item>
+        <item name="android:fontWeight">500</item>
+    </style>
+
+    <style name="ItemTextCaption" parent="ItemTextBase">
+        <item name="android:textSize">14sp</item>
+        <item name="android:textColor">@color/colorGrey</item>
+        <item name="android:fontWeight">500</item>
+    </style>
+</resources>
