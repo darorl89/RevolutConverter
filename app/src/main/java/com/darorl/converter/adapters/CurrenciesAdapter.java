@@ -130,7 +130,7 @@ public class CurrenciesAdapter extends RecyclerView.Adapter<CurrenciesAdapter.Vi
         @BindView(R.id.amountEditText)
         EditText amountEditText;
 
-        Context context;
+        private Context context;
 
         private boolean hasFocus = false;
 
@@ -138,7 +138,12 @@ public class CurrenciesAdapter extends RecyclerView.Adapter<CurrenciesAdapter.Vi
             String symbol = symbolTextView.getText().toString();
             baseCurrency = symbol;
             BigDecimal rate = ratesMap.get(symbol);
-            BigDecimal value = new BigDecimal(amountEditText.getText().toString());
+            BigDecimal value;
+            try {
+                value = new BigDecimal(amountEditText.getText().toString());
+            } catch (Exception ex) {
+                value = BigDecimal.ZERO;
+            }
             if (rate.equals(BigDecimal.ZERO) || value.equals(BigDecimal.ZERO)) {
                 eurAmount = BigDecimal.ZERO;
             } else {

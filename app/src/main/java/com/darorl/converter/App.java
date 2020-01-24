@@ -2,10 +2,12 @@ package com.darorl.converter;
 
 import android.app.Application;
 
+import com.darorl.converter.di.ApiModule;
 import com.darorl.converter.di.AppComponent;
 import com.darorl.converter.di.AppModule;
 import com.darorl.converter.di.DaggerAppComponent;
 import com.darorl.converter.di.PresentersModule;
+import com.darorl.converter.di.RepositoriesModule;
 import com.darorl.converter.repositories.RatesRepositoryImpl;
 
 public class App extends Application {
@@ -26,7 +28,9 @@ public class App extends Application {
     private AppComponent buildAppComponent() {
         return DaggerAppComponent.builder()
                 .appModule(new AppModule(this))
-                .presentersModule(new PresentersModule(new RatesRepositoryImpl()))
+                .apiModule(new ApiModule())
+                .repositoriesModule(new RepositoriesModule())
+                .presentersModule(new PresentersModule())
                 .build();
     }
 
